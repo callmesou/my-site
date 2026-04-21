@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Filter4Life — Stop buying furnace filters. Forever.</title>
+<meta name="description" content="A washable furnace filter that replaces the disposable ones you buy every few months. Made in Canada. Saves you hundreds over 10 years." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+/* Home-specific */
+.hero { padding: 140px 0 80px; position: relative; overflow: hidden; }
+.hero::before {
+  content: ''; position: absolute; top: 0; right: -200px;
+  width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(45, 93, 75, 0.08), transparent 70%);
+  pointer-events: none;
+}
+.hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 80px; align-items: center; }
+.hero-tag {
+  display: inline-block; background: var(--forest); color: var(--cream);
+  padding: 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 500; margin-bottom: 24px;
+}
+h1.hero-title {
+  font-family: var(--serif); font-size: clamp(44px, 6.5vw, 80px);
+  font-weight: 400; line-height: 1; letter-spacing: -0.03em;
+  color: var(--navy); margin-bottom: 24px;
+}
+h1.hero-title em { font-style: italic; color: var(--forest); font-weight: 300; }
+.hero-sub {
+  font-size: 19px; line-height: 1.5; color: var(--navy-soft);
+  max-width: 480px; margin-bottom: 32px;
+}
+.hero-sub strong { color: var(--navy); font-weight: 600; }
+.hero-reassure {
+  margin-top: 24px; display: flex; gap: 20px; flex-wrap: wrap;
+  font-size: 13px; color: var(--navy-soft);
+}
+.hero-reassure span { display: inline-flex; align-items: center; gap: 6px; }
+.hero-reassure svg { color: var(--forest); }
+.hero-visual {
+  position: relative; aspect-ratio: 4/5;
+  background: linear-gradient(165deg, var(--forest), var(--forest-deep));
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: 0 40px 80px -20px rgba(15, 33, 55, 0.25);
+}
+.hero-visual::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(244, 239, 230, 0.15), transparent 50%);
+}
+.hero-badge {
+  position: absolute; bottom: 24px; left: 24px;
+  background: var(--cream); color: var(--navy);
+  padding: 14px 18px; border-radius: var(--radius);
+  font-size: 12px; font-weight: 600; letter-spacing: 0.05em;
+  text-transform: uppercase; display: flex; align-items: center; gap: 10px;
+}
+
+/* Explain */
+.explain { padding: 80px 0; background: var(--cream); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.explain-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+.explain h2 {
+  font-family: var(--serif); font-size: clamp(32px, 4.5vw, 48px);
+  font-weight: 400; line-height: 1.15; letter-spacing: -0.02em;
+  margin-bottom: 28px; color: var(--navy);
+}
+.explain p { font-size: 19px; line-height: 1.6; color: var(--navy-soft); max-width: 680px; margin: 0 auto 20px; }
+.explain p strong { color: var(--navy); font-weight: 600; }
+.explain-compare {
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 24px;
+  align-items: center; margin-top: 56px; padding: 32px;
+  background: var(--bone); border-radius: var(--radius-lg); border: 1px solid var(--border);
+}
+.compare-side { text-align: left; }
+.compare-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
+.compare-side.bad .compare-label { color: var(--red); }
+.compare-side.good .compare-label { color: var(--forest); }
+.compare-title { font-family: var(--serif); font-size: 22px; font-weight: 500; margin-bottom: 8px; color: var(--navy); }
+.compare-desc { font-size: 14px; color: var(--navy-soft); }
+.compare-arrow { font-size: 32px; color: var(--navy-soft); font-family: var(--serif); }
+
+/* Savings */
+.savings { padding: 120px 0; background: linear-gradient(180deg, var(--bone) 0%, var(--cream-warm) 100%); }
+.savings-header { text-align: center; max-width: 720px; margin: 0 auto 64px; }
+.savings-header p { font-size: 17px; color: var(--navy-soft); line-height: 1.55; }
+.calc-card { background: var(--bone); border-radius: 24px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 40px 80px -30px rgba(15, 33, 55, 0.15); }
+.calc-top { padding: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.calc-q { margin-bottom: 32px; }
+.calc-q:last-child { margin-bottom: 0; }
+.calc-q-label { font-family: var(--serif); font-size: 22px; font-weight: 500; color: var(--navy); margin-bottom: 6px; letter-spacing: -0.01em; }
+.calc-q-hint { font-size: 14px; color: var(--navy-soft); margin-bottom: 20px; font-style: italic; }
+.segmented { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: var(--cream); border-radius: 100px; padding: 5px; }
+.segmented button { background: transparent; border: none; padding: 12px 8px; font-size: 14px; font-weight: 500; color: var(--navy-soft); cursor: pointer; border-radius: 100px; transition: all 0.2s; font-family: inherit; }
+.segmented button.active { background: var(--navy); color: var(--cream); }
+.price-input { display: flex; align-items: center; gap: 8px; background: var(--cream); border-radius: 100px; padding: 4px 4px 4px 24px; }
+.price-input .currency { font-weight: 500; color: var(--navy-soft); font-size: 16px; }
+.price-input input { flex: 1; background: transparent; border: none; padding: 14px 0; font-size: 20px; font-family: var(--serif); font-weight: 500; color: var(--navy); outline: none; width: 100%; }
+.not-sure { margin-top: 12px; font-size: 13px; color: var(--navy-soft); }
+.not-sure button { background: none; border: none; color: var(--forest); font-family: inherit; font-size: 13px; font-weight: 500; cursor: pointer; text-decoration: underline; padding: 0; }
+.calc-result { background: var(--navy); color: var(--cream); padding: 48px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0; }
+.result-stat { text-align: center; padding: 0 20px; border-right: 1px solid rgba(244, 239, 230, 0.15); }
+.result-stat:last-child { border-right: none; }
+.result-stat-label { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sage); margin-bottom: 16px; }
+.result-stat-value { font-family: var(--serif); font-weight: 400; line-height: 1; letter-spacing: -0.03em; color: var(--cream); font-size: clamp(36px, 5vw, 56px); }
+.result-stat.hero-stat .result-stat-value { color: #a5d4bc; font-size: clamp(48px, 6.5vw, 76px); }
+.result-stat-sub { font-size: 13px; color: var(--sage); margin-top: 8px; font-family: var(--serif); font-style: italic; }
+.calc-bottom { padding: 32px 48px; background: var(--forest); color: var(--cream); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.calc-bottom-text strong { font-family: var(--serif); font-size: 20px; font-weight: 500; display: block; margin-bottom: 4px; }
+.calc-bottom-text span { font-size: 14px; color: rgba(244, 239, 230, 0.8); }
+.calc-bottom .btn-primary { background: var(--cream); color: var(--navy); }
+.calc-bottom .btn-primary:hover { background: var(--bone); }
+
+/* How */
+.how { padding: 120px 0; }
+.how-header { text-align: center; max-width: 700px; margin: 0 auto 80px; }
+.how-header p { font-size: 17px; color: var(--navy-soft); }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.step { background: var(--cream); border-radius: var(--radius-lg); padding: 40px 32px; position: relative; transition: transform 0.3s, border-color 0.3s; border: 1px solid transparent; }
+.step:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+.step-num { font-family: var(--serif); font-size: 64px; font-weight: 300; line-height: 1; color: var(--forest); font-style: italic; margin-bottom: 20px; opacity: 0.85; }
+.step-visual { height: 160px; background: var(--bone); border-radius: var(--radius); margin-bottom: 24px; display: grid; place-items: center; color: var(--forest); border: 1px solid var(--border); }
+.step h3 { font-family: var(--serif); font-size: 24px; font-weight: 500; margin-bottom: 10px; letter-spacing: -0.01em; }
+.step p { font-size: 15px; color: var(--navy-soft); line-height: 1.55; }
+.step-time { display: inline-block; margin-top: 16px; font-size: 12px; font-weight: 600; color: var(--forest); background: rgba(45, 93, 75, 0.1); padding: 4px 10px; border-radius: 100px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* Products section */
+.products-home { padding: 120px 0; background: var(--cream); }
+.products-header { text-align: center; max-width: 640px; margin: 0 auto 64px; }
+.products-header p { font-size: 17px; color: var(--navy-soft); }
+.products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1100px; margin: 0 auto; }
+.products-home .product-card { background: var(--bone); }
+
+@media (max-width: 980px) {
+  .hero-grid, .calc-top { grid-template-columns: 1fr; gap: 40px; }
+  .calc-result { grid-template-columns: 1fr; padding: 32px; gap: 24px; }
+  .result-stat { border-right: none; border-bottom: 1px solid rgba(244, 239, 230, 0.15); padding: 20px 0; }
+  .result-stat:last-child { border-bottom: none; }
+  .steps, .products-grid { grid-template-columns: 1fr; }
+  .explain-compare { grid-template-columns: 1fr; gap: 20px; }
+  .compare-arrow { transform: rotate(90deg); }
+  .hero { padding-top: 120px; }
+  .calc-bottom { flex-direction: column; text-align: center; }
+}
+@media (max-width: 640px) {
+  .hero, .explain, .savings, .how, .products-home { padding: 72px 0; }
+  .calc-top, .calc-result, .calc-bottom { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <span class="logo-mark"></span>
+      Filter4Life
+    </a>
+    <div class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="for-buildings.html">For buildings</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <span class="lang">EN / FR</span>
+      <a href="shop.html" class="nav-cta">Shop now →</a>
+    </div>
+    <button class="mobile-toggle">Menu</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div>
+        <span class="hero-tag">🇨🇦 Made in Canada</span>
+        <h1 class="hero-title">Stop buying furnace filters. <em>Forever.</em></h1>
+        <p class="hero-sub">You know that disposable filter in your furnace you buy a few times a year? We made <strong>one you wash and reuse instead.</strong> Pay once. Keep it for years.</p>
+        <div class="cta-row">
+          <a href="#savings" class="btn btn-primary">See how much I'll save <span class="arrow">→</span></a>
+          <a href="how-it-works.html" class="btn btn-secondary">How it works</a>
+        </div>
+        <div class="hero-reassure">
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 10-year guarantee</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> Free Canada shipping</span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> 30-day returns</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="filter-illustration"><div class="filter-frame"></div></div>
+        <div class="hero-badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+          Wash & reuse
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPLAIN -->
+<section class="explain">
+  <div class="container explain-inner">
+    <div class="section-eyebrow">— In plain words</div>
+    <h2>It's a filter you wash instead of throw away.</h2>
+    <p>A furnace filter is the thin rectangle that slides into your furnace or heating system. It traps dust, pet hair, and pollen so your air stays cleaner. Most people <strong>buy a new one every 2–3 months and throw the old one in the trash.</strong></p>
+    <p>Our filter is a <strong>sturdy metal frame with a washable cloth inside.</strong> When it gets dirty, pull the cloth out, toss it in your laundry, and put it back. Same clean air — no more buying filters.</p>
+    <div class="explain-compare">
+      <div class="compare-side bad">
+        <div class="compare-label">✗ The old way</div>
+        <div class="compare-title">Disposable filters</div>
+        <div class="compare-desc">Buy every 2–3 months. Toss in the trash. Repeat forever. $15–30 each time.</div>
+      </div>
+      <div class="compare-arrow">→</div>
+      <div class="compare-side good">
+        <div class="compare-label">✓ The new way</div>
+        <div class="compare-title">Filter4Life</div>
+        <div class="compare-desc">Buy once for $199. Wash the cloth every few months. Keep it for 10+ years.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAVINGS -->
+<section class="savings" id="savings">
+  <div class="container">
+    <div class="savings-header">
+      <div class="section-eyebrow">— Your savings</div>
+      <h2 class="section-title">See exactly how much you'll save.</h2>
+      <p>Tell us two quick things about your current filters. We'll show you what you spend over 10 years — and what you'd save by switching.</p>
+    </div>
+    <div class="calc-card">
+      <div class="calc-top">
+        <div class="calc-q">
+          <div class="calc-q-label">How often do you buy a new filter?</div>
+          <div class="calc-q-hint">Most Canadian homes change 2–4 times a year.</div>
+          <div class="segmented" id="freq">
+            <button data-value="1">1× / year</button>
+            <button data-value="2" class="active">2× / year</button>
+            <button data-value="4">4× / year</button>
+            <button data-value="6">6× / year</button>
+          </div>
+        </div>
+        <div class="calc-q">
+          <div class="calc-q-label">How much does each filter cost?</div>
+          <div class="calc-q-hint">Check your last receipt, or estimate.</div>
+          <div class="price-input">
+            <span class="currency">CA$</span>
+            <input type="number" id="price" value="25" min="1" max="200" />
+          </div>
+          <div class="not-sure">
+            Not sure? <button onclick="setPrice(15)">$15</button> · <button onclick="setPrice(25)">$25</button> · <button onclick="setPrice(40)">$40</button>
+          </div>
+        </div>
+      </div>
+      <div class="calc-result">
+        <div class="result-stat">
+          <div class="result-stat-label">Filters you'd buy</div>
+          <div class="result-stat-value" id="out-filters">20</div>
+          <div class="result-stat-sub">over the next 10 years</div>
+        </div>
+        <div class="result-stat">
+          <div class="result-stat-label">You'd spend</div>
+          <div class="result-stat-value" id="out-spend">$500</div>
+          <div class="result-stat-sub">on disposable filters</div>
+        </div>
+        <div class="result-stat hero-stat">
+          <div class="result-stat-label">You'd save</div>
+          <div class="result-stat-value" id="out-savings">$301</div>
+          <div class="result-stat-sub">switching to Filter4Life</div>
+        </div>
+      </div>
+      <div class="calc-bottom">
+        <div class="calc-bottom-text">
+          <strong id="out-breakeven">Pays for itself in 4 years</strong>
+          <span>One Filter4Life kit is $199. After that, everything you'd spend on disposables stays in your pocket.</span>
+        </div>
+        <a href="shop.html" class="btn btn-primary">Start saving <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW -->
+<section class="how">
+  <div class="container">
+    <div class="how-header">
+      <div class="section-eyebrow">— How it works</div>
+      <h2 class="section-title">Three simple steps. Then you're done.</h2>
+      <p>If you've ever done laundry, you already know how to use this.</p>
+    </div>
+    <div class="steps">
+      <div class="step fade-up">
+        <div class="step-num">01</div>
+        <div class="step-visual">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <h3>Slide it in</h3>
+        <p>Pull out your old disposable filter. Slide Filter4Life into the same spot. Arrow points in the direction of airflow. No tools.</p>
+        <span class="step-time">Takes 60 seconds</span>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">02</div>
+        <div class="step-visual">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9"/><path d="M15 3v6h6"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Check it every 1–3 months</h3>
+        <p>When the cloth looks dirty, pull it out. Swap in the spare clean one (each kit comes with two). Your air keeps flowing.</p>
+        <span class="step-time">Takes 30 seconds</span>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">03</div>
+        <div class="step-visual">
+          <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 6h18M6 6v14a2 2 0 002 2h8a2 2 0 002-2V6"/><circle cx="12" cy="14" r="4"/></svg>
+        </div>
+        <h3>Toss it in the wash</h3>
+        <p>The dirty cloth goes in your regular laundry. No special detergent. Dry it, and it's ready for next time. Keep doing this for years.</p>
+        <span class="step-time">No extra time</span>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="how-it-works.html" class="btn btn-secondary">See the full guide <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS PREVIEW -->
+<section class="products-home">
+  <div class="container">
+    <div class="products-header">
+      <div class="section-eyebrow">— Shop</div>
+      <h2 class="section-title">Pick your size. Buy it once.</h2>
+      <p>Each kit includes a metal frame and two washable cloths — everything you need.</p>
+    </div>
+    <div class="products-grid">
+      <a href="product-20x16.html" class="product-card fade-up">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 16</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 16 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Metal frame + 2 washable cloths. Ready to install.</p>
+        <span class="product-link">View details <span>→</span></span>
+      </a>
+      <a href="product-20x20.html" class="product-card fade-up">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 20</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 20 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Metal frame + 2 washable cloths. Ready to install.</p>
+        <span class="product-link">View details <span>→</span></span>
+      </a>
+      <a href="product-20x25.html" class="product-card fade-up">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 25</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 25 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Metal frame + 2 washable cloths. Ready to install.</p>
+        <span class="product-link">View details <span>→</span></span>
+      </a>
+    </div>
+    <div style="text-align: center; margin-top: 48px;">
+      <a href="shop.html" class="btn btn-secondary">View all sizes <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- B2B CTA -->
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <h2>Manage a building? <em>Save thousands per year.</em></h2>
+    <p>Condos, rentals, and multi-unit buildings: stop ordering bulk disposable filters every quarter. Volume pricing available.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="for-buildings.html" class="btn btn-primary">See the B2B program <span class="arrow">→</span></a>
+      <a href="contact.html" class="btn btn-secondary">Talk to our team</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+        <p>Reusable furnace filters, made in Canada. Built for homeowners and property managers tired of throwing money in the trash.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All sizes</a></li>
+          <li><a href="product-20x16.html">20 × 16</a></li>
+          <li><a href="product-20x20.html">20 × 20</a></li>
+          <li><a href="product-20x25.html">20 × 25</a></li>
+          <li><a href="find-my-size.html">Find my size</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="for-buildings.html">For buildings</a></li>
+          <li><a href="guarantee.html">10-year guarantee</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shipping-returns.html">Shipping & returns</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Filter4Life. Made in Canada 🇨🇦</div>
+      <div>EN / FR</div>
+    </div>
+  </div>
+</footer>
+
+<script src="css/shared.js"></script>
+<script>
+// Calculator
+const freqBtns = document.querySelectorAll('#freq button');
+const priceInput = document.getElementById('price');
+const outFilters = document.getElementById('out-filters');
+const outSpend = document.getElementById('out-spend');
+const outSavings = document.getElementById('out-savings');
+const outBreakeven = document.getElementById('out-breakeven');
+const KIT_COST = 199;
+let freq = 2;
+function format(n) { return '$' + Math.max(0, Math.round(n)).toLocaleString(); }
+function update() {
+  const price = parseFloat(priceInput.value) || 0;
+  const filters = freq * 10;
+  const spend = filters * price;
+  const savings = spend - KIT_COST;
+  const yearlyDisposable = freq * price;
+  const breakevenYears = yearlyDisposable > 0 ? Math.ceil(KIT_COST / yearlyDisposable) : 0;
+  outFilters.textContent = filters;
+  outSpend.textContent = format(spend);
+  outSavings.textContent = format(savings);
+  if (savings <= 0) outBreakeven.textContent = `Break-even in ${breakevenYears} years`;
+  else outBreakeven.textContent = `Pays for itself in ${breakevenYears} year${breakevenYears === 1 ? '' : 's'}`;
+}
+function setPrice(val) { priceInput.value = val; update(); }
+window.setPrice = setPrice;
+freqBtns.forEach(b => {
+  b.addEventListener('click', () => {
+    freqBtns.forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    freq = parseInt(b.dataset.value);
+    update();
+  });
+});
+priceInput.addEventListener('input', update);
+update();
+</script>
+</body>
+</html>

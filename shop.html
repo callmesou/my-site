@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop all sizes — Filter4Life</title>
+<meta name="description" content="All Filter4Life reusable furnace filter sizes. Find the one that fits your home." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.shop-section { padding: 40px 0 120px; }
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 80px;
+}
+.shop-helpers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+.helper-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  border: 1px solid var(--border);
+}
+.helper-card h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+.helper-card p {
+  color: var(--navy-soft);
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+@media (max-width: 980px) {
+  .shop-grid, .shop-helpers { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+    <div class="nav-links">
+      <a href="shop.html" class="active">Shop</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="for-buildings.html">For buildings</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <span class="lang">EN / FR</span>
+      <a href="shop.html" class="nav-cta">Shop now →</a>
+    </div>
+    <button class="mobile-toggle">Menu</button>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Shop</div>
+      <div class="eyebrow">— All sizes</div>
+      <h1 class="page-title">Pick the size <em>that fits your home.</em></h1>
+      <p class="page-intro">Every kit includes one durable metal frame and two washable microfiber cloths. Same $199 price. Not sure which size? Scroll down — we'll help you figure it out.</p>
+    </div>
+  </div>
+</section>
+
+<section class="shop-section">
+  <div class="container">
+    <div class="shop-grid">
+      <a href="product-20x16.html" class="product-card">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 16</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 16 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Metal frame + 2 washable cloths. Fits most 20×16 furnace slots.</p>
+        <span class="product-link">View details <span>→</span></span>
+      </a>
+      <a href="product-20x20.html" class="product-card">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 20</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 20 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Metal frame + 2 washable cloths. The most common size in Canadian homes.</p>
+        <span class="product-link">View details <span>→</span></span>
+      </a>
+      <a href="product-20x25.html" class="product-card">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 25</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 25 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Metal frame + 2 washable cloths. Common in larger homes and townhouses.</p>
+        <span class="product-link">View details <span>→</span></span>
+      </a>
+    </div>
+
+    <div class="shop-helpers">
+      <div class="helper-card">
+        <h3>Not sure what size you need?</h3>
+        <p>No problem. Every furnace filter has its size printed right on the cardboard edge. We've got a 30-second guide to help you find yours.</p>
+        <a href="find-my-size.html" class="btn btn-secondary">Find my size <span class="arrow">→</span></a>
+      </div>
+      <div class="helper-card">
+        <h3>Need a different size?</h3>
+        <p>We're rolling out new sizes regularly. If your furnace takes a size we don't carry yet, send us a photo — we may be able to help or notify you when it's available.</p>
+        <a href="contact.html" class="btn btn-secondary">Contact us <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <h2>Still thinking? <em>Run the savings math.</em></h2>
+    <p>Our calculator shows exactly how much you'd save over 10 years based on your current filter habits.</p>
+    <a href="index.html#savings" class="btn btn-primary">Open the calculator <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+        <p>Reusable furnace filters, made in Canada. Built for homeowners and property managers tired of throwing money in the trash.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All sizes</a></li>
+          <li><a href="product-20x16.html">20 × 16</a></li>
+          <li><a href="product-20x20.html">20 × 20</a></li>
+          <li><a href="product-20x25.html">20 × 25</a></li>
+          <li><a href="find-my-size.html">Find my size</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="for-buildings.html">For buildings</a></li>
+          <li><a href="guarantee.html">10-year guarantee</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shipping-returns.html">Shipping & returns</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Filter4Life. Made in Canada 🇨🇦</div>
+      <div>EN / FR</div>
+    </div>
+  </div>
+</footer>
+
+<script src="css/shared.js"></script>
+</body>
+</html>

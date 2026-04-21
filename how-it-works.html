@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How it works — Filter4Life</title>
+<meta name="description" content="How the Filter4Life reusable furnace filter works. Install in 60 seconds, wash it in your laundry, use it for years." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.steps-detail { padding: 80px 0 120px; }
+.step-row {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 60px 0;
+  border-top: 1px solid var(--border);
+}
+.step-row:last-child { border-bottom: 1px solid var(--border); }
+.step-row.reverse .step-visual-lg { order: 3; }
+.step-big-num {
+  font-family: var(--serif);
+  font-size: 120px;
+  font-weight: 300;
+  line-height: 1;
+  color: var(--forest);
+  font-style: italic;
+  opacity: 0.9;
+}
+.step-content h2 {
+  font-family: var(--serif);
+  font-size: 40px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+.step-content p {
+  font-size: 17px;
+  color: var(--navy-soft);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.step-content strong { color: var(--navy); }
+.step-meta {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.step-meta span {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+.step-visual-lg {
+  aspect-ratio: 1;
+  background: linear-gradient(165deg, var(--forest), var(--forest-deep));
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 30px 60px -20px rgba(15, 33, 55, 0.2);
+}
+.step-visual-lg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(244, 239, 230, 0.15), transparent 50%);
+}
+.step-visual-lg svg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--cream);
+  opacity: 0.9;
+}
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+.tip-card {
+  background: var(--bone);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+}
+.tip-card h3 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: var(--navy);
+}
+.tip-card p { font-size: 15px; color: var(--navy-soft); }
+.tips-section {
+  padding: 100px 0;
+  background: var(--cream);
+}
+@media (max-width: 980px) {
+  .step-row, .step-row.reverse { grid-template-columns: 1fr; gap: 24px; text-align: left; }
+  .step-row.reverse .step-visual-lg { order: unset; }
+  .tips-grid { grid-template-columns: 1fr; }
+  .step-big-num { font-size: 80px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+    <div class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html" class="active">How it works</a>
+      <a href="for-buildings.html">For buildings</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <span class="lang">EN / FR</span>
+      <a href="shop.html" class="nav-cta">Shop now →</a>
+    </div>
+    <button class="mobile-toggle">Menu</button>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> How it works</div>
+      <div class="eyebrow">— The complete guide</div>
+      <h1 class="page-title">Easier than <em>changing a lightbulb.</em></h1>
+      <p class="page-intro">If you've ever done laundry, you already know how to use this. Here's exactly how to install Filter4Life, keep it clean, and enjoy fresh air for years without ever buying another filter.</p>
+    </div>
+  </div>
+</section>
+
+<section class="steps-detail">
+  <div class="container">
+    <div class="step-row">
+      <div class="step-big-num">01</div>
+      <div class="step-content">
+        <h2>Install it.</h2>
+        <p>Find your furnace — usually in the basement, a utility closet, or garage. Look for the flat rectangular slot on the side of the unit. <strong>Pull out your old disposable filter</strong> and slide the Filter4Life frame in its place.</p>
+        <p>Your old filter had an arrow printed on its edge showing airflow direction. Make sure Filter4Life's arrow points the same way.</p>
+        <div class="step-meta">
+          <span>⏱ 60 seconds</span>
+          <span>🔧 No tools</span>
+          <span>✅ First-timer friendly</span>
+        </div>
+      </div>
+      <div class="step-visual-lg">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M8 12h8M12 8v8"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="step-row reverse">
+      <div class="step-big-num">02</div>
+      <div class="step-content">
+        <h2>Check it every 1–3 months.</h2>
+        <p>Peek at the cloth insert every month or two. When it looks <strong>grey or fuzzy with dust</strong>, it's time for a swap. Homes with pets, smokers, or heavy furnace use might need to check more often.</p>
+        <p>Pull the dirty cloth out and slide the spare clean one in (every kit comes with two). That's it — fresh filtration in 30 seconds, no tools.</p>
+        <div class="step-meta">
+          <span>⏱ 30 seconds</span>
+          <span>👀 Visual check</span>
+          <span>🔄 Swap the spare</span>
+        </div>
+      </div>
+      <div class="step-visual-lg">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9"/>
+          <path d="M15 3v6h6"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="step-row">
+      <div class="step-big-num">03</div>
+      <div class="step-content">
+        <h2>Wash the dirty one.</h2>
+        <p>Toss the dirty cloth into your <strong>regular laundry</strong> — no special detergent, no separate cycle, no dry cleaning. Use cold or warm water. Tumble dry or air dry.</p>
+        <p>Once it's clean, store it somewhere dry until your next swap. That's the whole maintenance routine. You'll do it 4–6 times a year and forget about it the rest of the time.</p>
+        <div class="step-meta">
+          <span>🧺 Regular laundry</span>
+          <span>💧 Any water temp</span>
+          <span>♻️ Reuse indefinitely</span>
+        </div>
+      </div>
+      <div class="step-visual-lg">
+        <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M3 6h18M6 6v14a2 2 0 002 2h8a2 2 0 002-2V6"/>
+          <circle cx="12" cy="14" r="4"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tips-section">
+  <div class="container">
+    <div style="max-width: 680px; margin: 0 auto 48px; text-align: center;">
+      <div class="section-eyebrow">— Pro tips</div>
+      <h2 class="section-title">Small things that make it even easier.</h2>
+    </div>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>Set a calendar reminder</h3>
+        <p>Add a phone reminder for the first Saturday of every season. Fall, winter, spring, summer — check, swap, wash. Done.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Wash with towels</h3>
+        <p>The cloth is lint-light, so it pairs perfectly with a towel load. Same temperature, same cycle, zero extra effort.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Air dry if unsure</h3>
+        <p>Tumble dry works fine, but if you want to be extra gentle, hang it overnight. It'll be ready to swap in by morning.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Keep one in a drawer</h3>
+        <p>Store the spare cloth somewhere easy to find — a utility drawer, the shelf above your laundry machine. You'll swap in seconds.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Vacuum it between washes</h3>
+        <p>For a quick refresh between laundry days, run a handheld vacuum over the surface. Removes 80% of the dust in 10 seconds.</p>
+      </div>
+      <div class="tip-card">
+        <h3>Track your savings</h3>
+        <p>Every time you'd have bought a disposable filter, mark it on a sticky note. Watch the savings pile up month after month.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <h2>Ready to make the switch? <em>Start here.</em></h2>
+    <p>Pick your size and have it shipped free anywhere in Canada. 30-day no-questions returns.</p>
+    <a href="shop.html" class="btn btn-primary">Shop all sizes <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+        <p>Reusable furnace filters, made in Canada. Built for homeowners and property managers tired of throwing money in the trash.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="shop.html">All sizes</a></li>
+          <li><a href="product-20x16.html">20 × 16</a></li>
+          <li><a href="product-20x20.html">20 × 20</a></li>
+          <li><a href="product-20x25.html">20 × 25</a></li>
+          <li><a href="find-my-size.html">Find my size</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Learn</h4>
+        <ul>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="for-buildings.html">For buildings</a></li>
+          <li><a href="guarantee.html">10-year guarantee</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="shipping-returns.html">Shipping & returns</a></li>
+          <li><a href="privacy.html">Privacy policy</a></li>
+          <li><a href="terms.html">Terms of service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Filter4Life. Made in Canada 🇨🇦</div>
+      <div>EN / FR</div>
+    </div>
+  </div>
+</footer>
+
+<script src="css/shared.js"></script>
+</body>
+</html>

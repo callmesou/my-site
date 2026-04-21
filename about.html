@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Filter4Life</title>
+<meta name="description" content="Filter4Life is a Canadian company building reusable furnace filters to replace the disposable ones we all throw away." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.about-intro { padding: 40px 0 100px; }
+.intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.intro-text h2 {
+  font-family: var(--serif);
+  font-size: clamp(32px, 4.5vw, 44px);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+.intro-text h2 em { font-style: italic; color: var(--forest); }
+.intro-text p {
+  font-size: 17px;
+  color: var(--navy-soft);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.intro-text strong { color: var(--navy); }
+.intro-visual {
+  aspect-ratio: 4/5;
+  background: linear-gradient(165deg, var(--forest), var(--forest-deep));
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -20px rgba(15, 33, 55, 0.25);
+}
+.intro-visual::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(244, 239, 230, 0.15), transparent 50%);
+}
+.intro-visual .badge {
+  position: absolute;
+  bottom: 24px; left: 24px;
+  background: var(--cream);
+  padding: 14px 20px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.values { padding: 100px 0; background: var(--cream); }
+.values-header { text-align: center; max-width: 680px; margin: 0 auto 64px; }
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.value-card {
+  background: var(--bone);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  border: 1px solid var(--border);
+}
+.value-card .num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--forest);
+  margin-bottom: 16px;
+}
+.value-card h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: var(--navy);
+}
+.value-card p { font-size: 15px; color: var(--navy-soft); line-height: 1.65; }
+
+.made-in-canada { padding: 120px 0; }
+.mic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.mic-visual {
+  aspect-ratio: 1;
+  background: var(--navy);
+  border-radius: var(--radius-lg);
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+.mic-flag {
+  font-size: 200px;
+  line-height: 1;
+  opacity: 0.95;
+}
+.mic-text h2 {
+  font-family: var(--serif);
+  font-size: clamp(36px, 5vw, 52px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin-bottom: 24px;
+}
+.mic-text h2 em { font-style: italic; color: var(--forest); }
+.mic-text p {
+  font-size: 17px;
+  color: var(--navy-soft);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.mic-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 32px;
+}
+.mic-stat {
+  padding: 24px;
+  background: var(--cream);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+.mic-stat .num {
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--forest);
+  line-height: 1;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+.mic-stat .lbl { font-size: 13px; color: var(--navy-soft); }
+
+@media (max-width: 980px) {
+  .intro-grid, .mic-grid { grid-template-columns: 1fr; gap: 40px; }
+  .values-grid { grid-template-columns: 1fr; }
+  .mic-flag { font-size: 120px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+    <div class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="for-buildings.html">For buildings</a>
+      <a href="about.html" class="active">About</a>
+      <a href="faq.html">FAQ</a>
+      <span class="lang">EN / FR</span>
+      <a href="shop.html" class="nav-cta">Shop now →</a>
+    </div>
+    <button class="mobile-toggle">Menu</button>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> About</div>
+      <div class="eyebrow">— Our story</div>
+      <h1 class="page-title">We got tired of <em>throwing money in the trash.</em></h1>
+      <p class="page-intro">Every 2–3 months, a nearly-identical cardboard-and-fiberglass rectangle ends up in a Canadian landfill. We thought: what if it didn't have to?</p>
+    </div>
+  </div>
+</section>
+
+<section class="about-intro">
+  <div class="container">
+    <div class="intro-grid">
+      <div class="intro-text">
+        <h2>One filter. Built to last <em>a decade.</em></h2>
+        <p>Filter4Life started with a simple frustration. The average Canadian home spends hundreds of dollars a decade on disposable furnace filters — and throws every single one of them away.</p>
+        <p>The industry has stayed the same for decades: thin cardboard frames, fiberglass pleats, 60 days of life, into the trash. No innovation. No thought about where it goes when you're done.</p>
+        <p>We asked: <strong>what if you bought one sturdy metal frame, put a washable cloth inside, and kept it for 10+ years?</strong> No quarterly orders. No landfill waste. No reinventing your routine.</p>
+        <p>That's Filter4Life. <strong>One product. Made in Canada. Guaranteed for a decade.</strong></p>
+      </div>
+      <div class="intro-visual">
+        <div class="filter-illustration"><div class="filter-frame"></div></div>
+        <div class="badge">🇨🇦 Proudly Canadian</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="container">
+    <div class="values-header">
+      <div class="section-eyebrow">— What we stand for</div>
+      <h2 class="section-title">Simple principles. <em>No fine print.</em></h2>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="num">— 01</div>
+        <h3>Built to be kept</h3>
+        <p>We design products that last. Not 60 days. Not one season. A decade at least. If it can be reused, it should be reused.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">— 02</div>
+        <h3>Canadian through and through</h3>
+        <p>Designed, manufactured, and supported in Canada. Your dollars stay here. Our supply chain is short, transparent, and local.</p>
+      </div>
+      <div class="value-card">
+        <div class="num">— 03</div>
+        <h3>Honest and plain-spoken</h3>
+        <p>No jargon. No technical smoke screens. If we can't explain it in one sentence, we keep working until we can.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="made-in-canada">
+  <div class="container">
+    <div class="mic-grid">
+      <div class="mic-visual">
+        <div class="mic-flag">🇨🇦</div>
+      </div>
+      <div class="mic-text">
+        <div class="section-eyebrow">— Made in Canada</div>
+        <h2>Built here. <em>Supported here.</em></h2>
+        <p>Every Filter4Life frame is manufactured in Canada. The cloth inserts are sourced and finished domestically. When you buy from us, your dollars circulate through Canadian workshops, suppliers, and shipping partners.</p>
+        <p>That matters because it means <strong>faster shipping</strong>, local accountability, and a real person answering your emails if something goes wrong. No international supply-chain mysteries. No six-week lead times.</p>
+        <div class="mic-stats">
+          <div class="mic-stat">
+            <div class="num">100%</div>
+            <div class="lbl">Canadian manufactured</div>
+          </div>
+          <div class="mic-stat">
+            <div class="num">10 yrs</div>
+            <div class="lbl">Guaranteed lifespan</div>
+          </div>
+          <div class="mic-stat">
+            <div class="num">Free</div>
+            <div class="lbl">Shipping across Canada</div>
+          </div>
+          <div class="mic-stat">
+            <div class="num">0</div>
+            <div class="lbl">Landfill contributions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <div class="container cta-banner-inner">
+    <h2>Ready to buy <em>your last filter?</em></h2>
+    <p>Pick your size, and we'll ship it free anywhere in Canada.</p>
+    <div class="cta-row" style="justify-content: center;">
+      <a href="shop.html" class="btn btn-primary">Shop all sizes <span class="arrow">→</span></a>
+      <a href="contact.html" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+        <p>Reusable furnace filters, made in Canada. Built for homeowners and property managers tired of throwing money in the trash.</p>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All sizes</a></li><li><a href="product-20x16.html">20 × 16</a></li><li><a href="product-20x20.html">20 × 20</a></li><li><a href="product-20x25.html">20 × 25</a></li><li><a href="find-my-size.html">Find my size</a></li></ul></div>
+      <div class="footer-col"><h4>Learn</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="about.html">About us</a></li><li><a href="for-buildings.html">For buildings</a></li><li><a href="guarantee.html">10-year guarantee</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="contact.html">Contact us</a></li><li><a href="shipping-returns.html">Shipping & returns</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 Filter4Life. Made in Canada 🇨🇦</div><div>EN / FR</div></div>
+  </div>
+</footer>
+
+<script src="css/shared.js"></script>
+</body>
+</html>

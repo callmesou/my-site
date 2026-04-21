@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Filter4Life</title>
+<meta name="description" content="Get in touch with Filter4Life. Real Canadian support, one business day response." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.contact-section { padding: 40px 0 120px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact-info h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.contact-info p {
+  font-size: 16px;
+  color: var(--navy-soft);
+  line-height: 1.65;
+  margin-bottom: 24px;
+}
+.contact-channels { margin-top: 32px; }
+.channel {
+  padding: 24px;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  margin-bottom: 16px;
+  border: 1px solid var(--border);
+}
+.channel-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--forest);
+  margin-bottom: 6px;
+}
+.channel-value {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+.channel-sub { font-size: 13px; color: var(--navy-soft); }
+
+.form-card {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  border: 1px solid var(--border);
+}
+.form-card h3 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: var(--navy);
+  letter-spacing: -0.01em;
+}
+.form-card .form-sub {
+  font-size: 14px;
+  color: var(--navy-soft);
+  margin-bottom: 28px;
+}
+.form-card .btn-primary { width: 100%; justify-content: center; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 980px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 40px; }
+  .form-row { grid-template-columns: 1fr; }
+  .form-card { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+    <div class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="for-buildings.html">For buildings</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <span class="lang">EN / FR</span>
+      <a href="shop.html" class="nav-cta">Shop now →</a>
+    </div>
+    <button class="mobile-toggle">Menu</button>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Contact</div>
+      <div class="eyebrow">— Get in touch</div>
+      <h1 class="page-title">Real humans. <em>Real answers.</em></h1>
+      <p class="page-intro">We're a small Canadian team and we answer every message ourselves. No bots, no script trees, no scheduling links. Just send a note and we'll get back to you within one business day.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>How to reach us.</h2>
+        <p>The fastest way to reach us is the form on this page. You can also email us directly or send a note by mail if you prefer.</p>
+
+        <div class="contact-channels">
+          <div class="channel">
+            <div class="channel-label">— General inquiries</div>
+            <div class="channel-value">hello@filter4life.ca</div>
+            <div class="channel-sub">For product questions, feedback, or anything else</div>
+          </div>
+          <div class="channel">
+            <div class="channel-label">— B2B & property managers</div>
+            <div class="channel-value">b2b@filter4life.ca</div>
+            <div class="channel-sub">Volume pricing, rollouts, and multi-unit quotes</div>
+          </div>
+          <div class="channel">
+            <div class="channel-label">— Support hours</div>
+            <div class="channel-value">Mon–Fri, 9am–5pm ET</div>
+            <div class="channel-sub">Response within 1 business day</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <h3>Send us a message</h3>
+        <div class="form-sub">All fields required. We read every message.</div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Name</label>
+            <input class="form-input" type="text" placeholder="Your name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Email</label>
+            <input class="form-input" type="email" placeholder="you@example.com" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">What's this about?</label>
+          <select class="form-select">
+            <option>General question</option>
+            <option>Sizing help</option>
+            <option>Order status</option>
+            <option>Return or warranty</option>
+            <option>B2B / property management</option>
+            <option>Partnership or press</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Your message</label>
+          <textarea class="form-textarea" placeholder="Tell us what's on your mind..."></textarea>
+        </div>
+
+        <button class="btn btn-primary">Send message <span class="arrow">→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+        <p>Reusable furnace filters, made in Canada. Built for homeowners and property managers tired of throwing money in the trash.</p>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All sizes</a></li><li><a href="product-20x16.html">20 × 16</a></li><li><a href="product-20x20.html">20 × 20</a></li><li><a href="product-20x25.html">20 × 25</a></li><li><a href="find-my-size.html">Find my size</a></li></ul></div>
+      <div class="footer-col"><h4>Learn</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="about.html">About us</a></li><li><a href="for-buildings.html">For buildings</a></li><li><a href="guarantee.html">10-year guarantee</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="contact.html">Contact us</a></li><li><a href="shipping-returns.html">Shipping & returns</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 Filter4Life. Made in Canada 🇨🇦</div><div>EN / FR</div></div>
+  </div>
+</footer>
+
+<script src="css/shared.js"></script>
+</body>
+</html>

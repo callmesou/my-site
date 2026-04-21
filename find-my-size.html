@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Find my filter size — Filter4Life</title>
+<meta name="description" content="Not sure what size furnace filter you need? Here's how to find out in 30 seconds." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/shared.css">
+<style>
+.size-guide { padding: 40px 0 100px; }
+.guide-steps { max-width: 780px; margin: 0 auto; }
+.guide-step {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 32px;
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+  align-items: start;
+}
+.guide-step:last-child { border-bottom: 1px solid var(--border); }
+.guide-num {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 56px;
+  font-weight: 300;
+  color: var(--forest);
+  line-height: 1;
+}
+.guide-content h2 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.guide-content p {
+  font-size: 16px;
+  color: var(--navy-soft);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+.guide-content strong { color: var(--navy); }
+.example-box {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-top: 20px;
+  border: 1px solid var(--border);
+}
+.example-box-label {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--forest);
+  margin-bottom: 10px;
+}
+.example-box-code {
+  font-family: var(--serif);
+  font-size: 22px;
+  color: var(--navy);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.example-box-desc { font-size: 14px; color: var(--navy-soft); }
+
+.size-match {
+  padding: 80px 0;
+  background: var(--cream);
+}
+.match-header { text-align: center; max-width: 640px; margin: 0 auto 48px; }
+.match-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+
+.still-stuck {
+  padding: 80px 0;
+}
+.stuck-card {
+  background: var(--navy);
+  color: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 48px;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+.stuck-card h3 {
+  font-family: var(--serif);
+  font-size: 28px;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.stuck-card h3 em { font-style: italic; color: #a5d4bc; }
+.stuck-card p { color: var(--sage); margin-bottom: 24px; font-size: 15px; }
+.stuck-card .btn-primary { background: var(--cream); color: var(--navy); }
+
+@media (max-width: 640px) {
+  .guide-step { grid-template-columns: 1fr; gap: 12px; }
+  .guide-num { font-size: 40px; }
+  .match-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+    <div class="nav-links">
+      <a href="shop.html">Shop</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="for-buildings.html">For buildings</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <span class="lang">EN / FR</span>
+      <a href="shop.html" class="nav-cta">Shop now →</a>
+    </div>
+    <button class="mobile-toggle">Menu</button>
+  </div>
+</nav>
+
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <a href="shop.html">Shop</a> <span>/</span> Find my size</div>
+      <div class="eyebrow">— 30-second sizing guide</div>
+      <h1 class="page-title">Find your <em>filter size.</em></h1>
+      <p class="page-intro">Don't worry — you don't need a measuring tape. The size you need is almost always printed right on your current filter. Here's how to find it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="size-guide">
+  <div class="container">
+    <div class="guide-steps">
+      <div class="guide-step">
+        <div class="guide-num">01</div>
+        <div class="guide-content">
+          <h2>Find your furnace.</h2>
+          <p>It's usually in the <strong>basement, a utility closet, or the garage</strong>. Look for a large metal box (often grey, beige, or white) with a vent pipe going up into the ceiling.</p>
+          <p>If you have a condo or apartment, the furnace or air handler might be in a dedicated mechanical closet.</p>
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-num">02</div>
+        <div class="guide-content">
+          <h2>Turn it off.</h2>
+          <p>Just for a minute. Go to your thermostat and switch it to <strong>"Off"</strong>. This stops the fan while you're working.</p>
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-num">03</div>
+        <div class="guide-content">
+          <h2>Find the filter slot.</h2>
+          <p>On your furnace, look for a <strong>flat rectangular slot</strong> on the side — usually close to the bottom, sometimes covered by a small metal door or panel. Pop it open.</p>
+          <p>Slide out the current filter. It'll look like a thin rectangle made of cardboard with pleated material inside.</p>
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-num">04</div>
+        <div class="guide-content">
+          <h2>Read the size on the edge.</h2>
+          <p>Look at the <strong>cardboard edge of your old filter</strong>. The size is printed right there, usually in a format like this:</p>
+          <div class="example-box">
+            <div class="example-box-label">— Example</div>
+            <div class="example-box-code">20 × 20 × 1</div>
+            <div class="example-box-desc">The first two numbers are width and height in inches. The third is depth (usually 1").</div>
+          </div>
+          <p style="margin-top: 20px;">If you see <strong>20 × 20</strong>, <strong>20 × 16</strong>, or <strong>20 × 25</strong>, we have a kit that fits you directly. The order of the first two numbers doesn't matter — 16 × 20 is the same as 20 × 16.</p>
+        </div>
+      </div>
+
+      <div class="guide-step">
+        <div class="guide-num">05</div>
+        <div class="guide-content">
+          <h2>That's it. Order your kit.</h2>
+          <p>Match your size to the right product below. Not sure? Send us a <strong>photo of your current filter's edge</strong> and we'll confirm it for you.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="size-match">
+  <div class="container">
+    <div class="match-header">
+      <div class="section-eyebrow">— The sizes we carry</div>
+      <h2 class="section-title">Match your size. Click to buy.</h2>
+    </div>
+    <div class="match-grid">
+      <a href="product-20x16.html" class="product-card">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 16</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 16 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Common in compact homes and smaller furnaces.</p>
+        <span class="product-link">Buy this size <span>→</span></span>
+      </a>
+      <a href="product-20x20.html" class="product-card">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 20</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 20 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">The most common residential size in Canada.</p>
+        <span class="product-link">Buy this size <span>→</span></span>
+      </a>
+      <a href="product-20x25.html" class="product-card">
+        <div class="product-visual">
+          <span class="product-size-tag">20 × 25</span>
+          <div class="filter-illustration"><div class="filter-frame"></div></div>
+        </div>
+        <div class="product-meta">
+          <div class="product-name">20 × 25 Kit</div>
+          <div class="product-price">$199</div>
+        </div>
+        <p class="product-desc">Common in larger homes and townhouses.</p>
+        <span class="product-link">Buy this size <span>→</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="still-stuck">
+  <div class="container">
+    <div class="stuck-card">
+      <h3>Different size? <em>We can help.</em></h3>
+      <p>If your furnace takes a size we don't carry yet (like 16×25 or 24×24), send us a photo and we'll let you know if it's coming soon or help you find a good interim solution.</p>
+      <a href="contact.html" class="btn btn-primary">Send us a photo <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><span class="logo-mark"></span> Filter4Life</a>
+        <p>Reusable furnace filters, made in Canada. Built for homeowners and property managers tired of throwing money in the trash.</p>
+      </div>
+      <div class="footer-col"><h4>Shop</h4><ul><li><a href="shop.html">All sizes</a></li><li><a href="product-20x16.html">20 × 16</a></li><li><a href="product-20x20.html">20 × 20</a></li><li><a href="product-20x25.html">20 × 25</a></li><li><a href="find-my-size.html">Find my size</a></li></ul></div>
+      <div class="footer-col"><h4>Learn</h4><ul><li><a href="how-it-works.html">How it works</a></li><li><a href="about.html">About us</a></li><li><a href="for-buildings.html">For buildings</a></li><li><a href="guarantee.html">10-year guarantee</a></li><li><a href="faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="contact.html">Contact us</a></li><li><a href="shipping-returns.html">Shipping & returns</a></li><li><a href="privacy.html">Privacy policy</a></li><li><a href="terms.html">Terms of service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 Filter4Life. Made in Canada 🇨🇦</div><div>EN / FR</div></div>
+  </div>
+</footer>
+
+<script src="css/shared.js"></script>
+</body>
+</html>
